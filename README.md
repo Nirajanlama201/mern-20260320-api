@@ -17,11 +17,8 @@
 
 ====================================
 
-- File system
-- HTTP
-- Path
-- URL
 - Event
+
 - Callbacks/Promises/Async-await
 
 =======================================
