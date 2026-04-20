@@ -15,8 +15,25 @@
 - Non-blocking I/O operation
 - Event loop
 
-====================================
+## Express.js
 
-- Express.js
+- It is a Node.js API/backend framework.
+- Used to build API (Application program interface)
+- It simplies the HTTP module of node.js
+- Minimalist, fast and unopinionated framework
 
-=======================================
+## API
+
+- API format: JSON (JavaScript Object Notation)
+- REST API (Representational state transfer)
+
+### JSON
+
+- JS Object => JSON.stringify() => JSON
+- JSON => JSON.parse() => JS Object
+
+=========================
+
+- HTTP Methods
+- Layered architecture
+- Postman
