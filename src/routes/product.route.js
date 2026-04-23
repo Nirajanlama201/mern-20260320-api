@@ -11,4 +11,6 @@ router.get("/first", productController.getFirstProduct);
 // Dynamic route (:param)
 router.get("/:id", productController.getProductById);
 
+router.post("/", productController.createProduct);
+
 export default router;

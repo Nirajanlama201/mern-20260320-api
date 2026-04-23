@@ -22,4 +22,15 @@ const getProductById = async (req, res) => {
   res.json(product);
 };
 
-export default { getAllProducts, getFirstProduct, getProductById };
+const createProduct = async (req, res) => {
+  const product = await productService.createProduct();
+
+  res.json(product);
+};
+
+export default {
+  getAllProducts,
+  getFirstProduct,
+  getProductById,
+  createProduct,
+};

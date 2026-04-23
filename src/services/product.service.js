@@ -1,4 +1,5 @@
 import fs from "fs/promises";
+import Product from "../models/Product.js";
 
 const getAllProducts = async () => {
   const products = await fs.readFile("src/data/products.json", "utf8");
@@ -22,4 +23,18 @@ const getProductById = async (id) => {
   return list.find((product) => product.id == id);
 };
 
-export default { getAllProducts, getFirstProduct, getProductById };
+const createProduct = async () => {
+  return await Product.create({
+    name: "Iphone 16 pro max",
+    brand: "Apple",
+    category: "Smartphones",
+    price: 210000,
+  });
+};
+
+export default {
+  getAllProducts,
+  getFirstProduct,
+  getProductById,
+  createProduct,
+};
