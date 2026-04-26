@@ -120,6 +120,38 @@ c. sort: db.users.find().sort({name:1}) 1: ASC, -1: DESC
 - Create models using Schema
 - Relationships
 
+# Cryptography
+
+## Encryption
+
+- Encryption: Converting readable text to unreadable/cipher text
+- for e.g: hello -> aijosecq9wn033qcu-
+
+- Decryption: Converting cipher text to readable text
+- for e.g: aijosecq9wn033qcu- -> hello
+
+### Types
+
+- Symmetric: Same key is used for encryption and decryption
+- Assymetric: Different keys are used for encryption and decryption, Public/Private key (RSA)
+
+## Hashing
+
+- One way encryption
+- Convert the readable text to cipher text but not back to readable
+- Hashing always returns same cipher
+- hello => 123456asdfdsfg
+
+## Salt
+
+- Adding random characters in the hash
+- hello -> 123sdg456ahyusdfdsfuigui
+- hello => 12asd3456assdfdghsfgke34
+
 =========================
 
+- Session, Cookie
+- JWT (json web token)
 - Postman
+- ZOD data validation
+
