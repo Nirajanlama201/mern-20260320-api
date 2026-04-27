@@ -1,6 +1,12 @@
 import productService from "../services/product.service.js";
 
 const getAllProducts = async (req, res) => {
+  const cookie = req.headers.cookie;
+
+  const token = cookie.split("=")[1];
+
+  console.log(token);
+
   const products = await productService.getAllProducts();
 
   res.json(products);

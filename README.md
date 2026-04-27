@@ -148,10 +148,50 @@ c. sort: db.users.find().sort({name:1}) 1: ASC, -1: DESC
 - hello -> 123sdg456ahyusdfdsfuigui
 - hello => 12asd3456assdfdghsfgke34
 
+## Authentication & Authorization
+
+1. Authentication: Who you are? Logged in user
+2. Authorization:  What you can do? User role
+
+## JSON Web Token (JWT)
+
+- Self verified
+- Tamper proof
+- Used for both authentication & authorization
+
+### JWT structure
+
+- Header
+- Payload
+- Signature
+
+## Storage
+
+1. Cookie Storage
+- Size: 4KB
+- Storage: Server & Browser
+- Expiry: Cookie expiry
+
+2. Local Storage
+- Size: 5-10MB
+- Storage: Only Browser
+- Expiry: Never
+
+3. Session Storage
+- Size: 5MB
+- Storage: Only Browser
+- Expiry: On tab close
+
+## Auth Process
+
+1. Login/Register success
+2. Generate token (JWT)
+3. Store token: Cookie, Session, Local storage
+4. Append the token in every request to handle auth
+5. Verify the token and authenticate/authorize user (Middleware)
+
 =========================
 
-- Session, Cookie
-- JWT (json web token)
+- Middleware: Authentication/Authorization (Role-Based Access Control)
 - Postman
 - ZOD data validation
-
