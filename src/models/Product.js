@@ -29,6 +29,11 @@ const productSchema = new mongoose.Schema({
     type: Date,
     default: Date.now(),
   },
+  createdBy: {
+    type: mongoose.Schema.ObjectId,
+    ref: "User",
+    required: [true, "Created by user id is required."],
+  },
 });
 
 export default mongoose.model("Product", productSchema);

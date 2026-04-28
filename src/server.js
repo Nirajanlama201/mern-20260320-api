@@ -6,12 +6,15 @@ import userRoute from "./routes/user.route.js";
 import authRoute from "./routes/auth.route.js";
 import connectDB from "./config/database.js";
 import bodyParser from "body-parser";
+import logger from "./middlewares/logger.js";
+import auth from "./middlewares/auth.js";
 
 const app = express();
 
 connectDB();
 
 app.use(bodyParser.json());
+app.use(logger);
 
 app.get("/", (request, response) => {
   response.send("Home page");
@@ -30,7 +33,7 @@ app.post("/contact", (req, res) => {
 });
 
 app.use("/api/products", productRoute);
-app.use("/api/users", userRoute);
+app.use("/api/users", auth, userRoute);
 app.use("/api/auth", authRoute);
 
 app.listen(config.port, () => {

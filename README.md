@@ -190,8 +190,35 @@ c. sort: db.users.find().sort({name:1}) 1: ASC, -1: DESC
 4. Append the token in every request to handle auth
 5. Verify the token and authenticate/authorize user (Middleware)
 
+## Middleware
+
+- Function that lies between request and response
+- Function that has access of both request and response object.
+- It has additional functionality to go to next() middleware call
+
+Browser ------ Request ------> Server
+Middleware, Middleware, Middleware
+Server ------- Response -----> Browser
+
+### Usage
+
+- Logging
+- Authentication & Authorization
+- Request & Response object modification
+- Error handling
+- Data validation
+
 =========================
 
-- Middleware: Authentication/Authorization (Role-Based Access Control)
-- Postman
 - ZOD data validation
+- Postman
+- Product: filter, sort, pagination
+- Product count, get brands, categories
+- Order management
+- Payment integration (Khalti, Stripe)
+- File upload in Cloudinary
+- Reset password / Send email
+- User management, get orders by merchant
+- Template engine
+- Deployment in Vercel
+- AI Integration (Gemini)
